@@ -1,0 +1,585 @@
+/*=====================================================
+ Top Page
+ ====================================================*/
+
+ /*---------------------------
+ Top Video
+---------------------------*/
+.topVideo {
+	&Bg-video {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		right: auto;
+		transform: translate(-50%, 0);
+		margin: auto;
+		height: auto;
+		width: 120%;
+		min-height: 100%;
+		background: url('./assets/video/nagano_top20210121.png') no-repeat top center/100%;
+		z-index: -1;
+		@include hack-ie(ie11) {
+			width: 160%;
+		}
+	}
+	.importantNews {
+		position: absolute;
+		// position: relative;
+		left: 0;
+		bottom: 1vw;
+		width: 100%;
+		background-color: #f3edff;
+		text-align: center;
+		padding: 2rem 1rem;
+		font-size: 2rem;
+		@include hack-ie(ie11) {
+			bottom: 0;
+		}
+	}
+}
+/*---------------------------
+ Top Banner
+---------------------------*/
+.topBanner {
+	padding: 80px 0 0;
+	@include breakpoint(pc) {
+		padding: 0;
+	}
+
+	.importantNews {
+		// position: absolute;
+		position: relative;
+		left: 0;
+		bottom: 1vw;
+		width: 100%;
+		background-color: #f3edff;
+		text-align: center;
+		padding: 2rem 1rem;
+		font-size: 1.4rem;
+		@include breakpoint(pc) {
+			font-size: 2rem;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		object-fit: cover;
+		&02 {
+			height: auto;
+			top: auto;
+			bottom: 0;
+		}
+		@include hack-ie(ie11) {
+			height: auto;
+			top: auto;
+			bottom: 0;
+		}
+	}
+
+	&__caption {
+		position: absolute;
+		top: 15%;
+		z-index: 5;
+		@include breakpoint(pc) {
+			width: 100%;
+			top: auto;
+			left: 0;
+			bottom: percentVal(215,870);
+		}
+	}
+
+	&__txt {
+		width: percentVal(1049,1100);
+		margin: auto;
+	}
+
+	&__spTxt {
+		// color: $color-blue;
+		// font-weight: bold;
+		// font-size: 10.66vw;
+		// text-align: center;
+		// letter-spacing: calculate_ls(100);
+		// line-height: calculate_lh(40,54);
+		// font-weight: 400;
+		margin: 3rem auto;
+		width: 90%;
+		@include breakpoint(pc2) {
+			width: 82.13%;
+			margin: auto;
+		}
+	}
+	.hiddenPc {
+		display: block;
+		@include breakpoint(sp) {
+			display: none;
+		}
+	}
+	
+	.hiddenSp {
+		display: none;
+		 @include breakpoint(sp) {
+			display: block;
+		}
+	}
+}
+
+
+/*---------------------------
+ Top Promise
+---------------------------*/
+.topPromise {
+	padding: 20px 0 0;
+	background: url('assets/images/top/topPromiseSp_bg@2x.png')no-repeat top center/ 100% 100%;
+	@include breakpoint(sp) {
+		background: url('assets/images/top/topPromise_bg@2x.jpg')no-repeat center center/ cover;
+	}
+	@include breakpoint(pc2) {
+		padding: 20px 0 118px;
+	}
+
+	&__img {
+		max-width: 180px;
+		@include breakpoint(sp) {
+			max-width: 278px;
+		}
+	}
+
+	&__ttl {
+		font-family: 'Mulish', sans-serif;
+		font-weight: 500;
+		font-size: 7rem;
+		font-style: italic;
+		color: #414E86;
+		letter-spacing: calculate_ls(100);
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	&__txt {
+		font-family: "游ゴシック体", YuGothic, sans-serif;
+		font-weight: bold;
+		font-size: 1.6rem;
+		color: $color-blue;
+		line-height: calculate_lh(16,42);
+		letter-spacing: 0;
+		margin: 30px 0 0;
+		@include breakpoint(sp) {
+			margin: 70px 0 0;
+			font-size: 2.6rem;
+			line-height: calculate_lh(26,50);
+		}
+	}
+
+	.btn {
+		margin: 100px auto 0;
+		@include breakpoint(pc2) {
+			margin: 5px auto 0;
+		}
+	}
+}
+
+/*---------------------------
+ Top Section3
+---------------------------*/
+.topSec3 {
+    padding: 20px 0 0;
+    background: url('assets/images/top/topSec3_bg.png') no-repeat top center/100% 100%;
+    
+    &__content {
+        color: #1D1D1D;
+        font-size: 1.6rem;
+        letter-spacing: 0;
+        line-height: calculate_lh(14,26);
+        padding: 0 15px;
+        @include breakpoint(pc) {
+            font-size: 2rem;
+            letter-spacing: calculate_ls(50);
+            line-height: calculate_lh(20,30);
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        margin: 60px auto 0;
+    }
+
+    &__box:last-child {
+        padding: 50px 0 40px;
+    }
+
+    .news {
+    	@include breakpoint(pc) {
+        	width: percentVal(1040,1100);
+        }
+
+        &__link {
+			padding: 15px 0;
+			font-weight: 300;
+        	@include breakpoint(pc){
+				padding: 30px 10px;
+           	}
+        }
+
+        &__date {
+			color: $color-blue02;
+			text-align: left;
+			@include breakpoint(pc){
+				text-align: center;
+			}
+        }
+    }
+
+    .tab {
+    	background-color: transparent;
+    	margin-top: 30px;
+    }
+
+    .product__test {
+    	background-color: transparent;
+    }
+
+}
+
+/*---------------------------
+ Top Solution
+---------------------------*/
+.topSolution {
+	margin-top: 30px;
+	@include breakpoint(pc){
+		margin-top: 75px;
+	}
+
+	.container {
+		display: flex;
+	}
+
+	&__item {
+		padding: 0;
+		display: flex;
+		flex-direction: column-reverse;
+		@include breakpoint(pc) {
+			display: block;
+		}
+		@include hack-ie(ie11) {
+			overflow: hidden;
+		}
+
+		&:not(:first-child) {
+			margin-top: 60px;
+			@include breakpoint(pc) {
+				margin-top: 120px;
+			}
+		}
+
+		@include breakpoint(pc) {
+			padding: 0;
+
+			&:not(:first-child) {
+				margin-top: 80px;
+			}
+
+			&:nth-child(even) .container {
+				justify-content: flex-end;
+			}
+
+			&:nth-child(odd), &:nth-child(even) {
+				background: transparent;
+			}
+
+			&:nth-child(even) .btn {
+				background: #0C074C;
+				border: 0;
+			}
+		}
+	}
+
+	&__item:nth-child(odd) &Sp__ttl {
+		color: #1D1D1D;
+	}
+
+	&__item:nth-child(even) &Sp__ttl {
+		color: $color-white;
+	}
+
+	&__item:nth-child(2) &__caption {
+		width: 100%;
+		@include breakpoint(pc) {
+			width: 390px;
+		}
+		@include breakpoint(pc2) {
+			width: percentVal(350,1100);
+		}
+	}
+
+	&__caption {
+		width: 100%;
+		position: relative;
+		z-index: 2;
+		padding: 40px 0 10px;
+		@include breakpoint(pc) {
+			width: 390px;
+			display: flex;
+			align-items: flex-end;
+			padding: 160px 0 50px;
+		}
+	}
+
+	&__ttl {
+		color: $color-blue;
+		font-size: 2.6rem;
+		font-weight: 300;
+		line-height: calculate_lh(30,50);
+		@include breakpoint(pc){
+			font-size: 3rem;
+			font-weight: 400;
+		}
+	}
+
+	&__txt {
+		font-weight: 300;
+	}
+
+	&__btn {
+		display: block;
+		min-width: auto;
+		margin: 20px 0 0;
+		@include breakpoint(pc3){
+			min-width: 350px;
+		}
+	}
+
+	&__wrap-btn {
+		padding: 0 15px;
+
+		.btn {
+			margin: 0 auto;
+			font-weight: 500;
+			@include breakpoint(pc) {
+				margin: 60px auto 0;
+			}
+		}
+	}
+
+	&__img {
+		object-fit: cover;
+		position: relative;
+		width: 100%;
+		height: 250px;
+		z-index: 1;
+		@include breakpoint(pc) {
+			position: absolute;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+		@include hack-ie(ie11) {
+			height: inherit;
+		}
+	}
+
+}
+
+
+/*---------------------------
+ CTA01
+---------------------------*/
+.cta01 {
+	overflow: hidden;
+	margin: 0;
+	&__item {
+		width: 100%;
+		@include breakpoint(pc) {
+			width: 33.33%;
+		}
+	}
+
+	&__link {
+		transition: all .25s ease-in-out;
+		-moz-transition: all .25s ease-in-out;
+		-webkit-transition: all .25s ease-in-out;
+
+		&:before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: rgba(55, 53, 130,.56);
+			mix-blend-mode: multiply;
+			pointer-events: none;
+		}
+	}
+
+	&__item:nth-child(2) &__link:before {
+		background: rgba(55, 53, 130,.30);
+	}
+
+
+	&__item:nth-child(3) &__link:before {
+		background: rgba(55, 53, 130,.40);
+	}
+
+	&__img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		@include breakpoint(pc4) {
+			min-height: 405px;
+		}
+	}
+
+	&__txt {
+		color: $color-white;
+		font-family: din-2014, sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 3.6rem;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: calculate_ls(50);
+		line-height: calculate_lh(50,64);
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		@include breakpoint(pc2) {
+			font-size: 5rem;
+		}
+	}
+
+	&__subTtl {
+		color: $color-white;
+		font-family: $font-primary;
+		font-size: 1.2rem;
+		font-weight: 500;
+		letter-spacing: calculate_ls(300);
+		line-height: calculate_lh(16,24);
+		display: block;
+		@include breakpoint(pc){
+			font-size: 1.6rem;
+		}
+	}
+
+}
+
+/*---------------------------
+ CTA02
+---------------------------*/
+.cta02 {
+
+	align-items: stretch;
+
+	&__item {
+		width: 100%;
+		@include breakpoint(pc) {
+			width: calc(100% / 4)
+		}
+
+
+		&:first-child{
+			@media screen and (max-width: 767px){
+				width: 100%;
+			}
+			width: 50%;
+			
+			@media screen and (max-width: 1330px){
+				width: 100%;
+			}
+		}
+
+		&:nth-child(2), &:nth-child(3){
+
+			@media screen and (max-width: 1330px){
+				width: 50%;
+			}
+			@media screen and (max-width: 767px){
+				width: 100%;
+			}
+		}
+	}
+	
+
+	&__item:first-child &__link {
+		color: $color-white;
+		background: #a1bfd9;
+		&:after {
+			background: url('assets/images/top/topCta02_icon_white@2x.png') no-repeat center center/cover;
+		}
+		
+	}
+
+	&__item:nth-child(2) &__link {
+		color: $color-white;
+		background: #071737;
+		&:after {
+			background: url('assets/images/top/topCta02_icon_white@2x.png') no-repeat center center/cover;
+		}
+	}
+	
+
+	&__item:last-child &__link {
+		color: $color-blue02;
+		background: #E8EDF2;
+		&:after {
+			background: url('assets/images/top/topCta02_icon_blue@2x.png') no-repeat center center/cover;
+		}
+	}
+
+	&__link {
+		font-size: 3.6rem;
+		font-family: din-2014, sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		line-height: calculate_lh(46,59);
+		letter-spacing: calculate_ls(50);
+		text-transform: uppercase;
+		// padding: 20px percentVal(136,720) 30px percentVal(100,720);
+		padding: 20px 60PX 30px;
+		height: 100%;
+		&:after {
+			position: absolute;
+			content: '';
+			width: 36px;
+			height: 16px;
+			top: percentVal(60,200);
+			right: 50px;
+
+
+			@media screen and (max-width: 767px){
+				right: 20px;
+			}
+		}
+
+		@include breakpoint(pc2) {
+			font-size: 4.6rem;
+			padding: 60px percentVal(136,720) 60px percentVal(100,720);
+			padding: 60px 95px 60px 40px;
+		}
+		@media screen and (max-width: 767px){
+			padding: 20px 60px 20px 20px;
+		}
+	}
+
+	&__subTtl {
+		font-size: $font-primary;
+		font-size: 1.2rem;
+		font-weight: 500;
+		font-style: normal;
+		letter-spacing: calculate_ls(300);
+		line-height: calculate_lh(16,24);
+		display: block;
+		@include breakpoint(pc){
+			font-size: 1.6rem;
+		}
+	}
+
+
+}
+

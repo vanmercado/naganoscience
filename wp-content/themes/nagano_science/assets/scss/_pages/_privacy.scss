@@ -1,0 +1,43 @@
+/*=====================================================
+ Privacy Policy
+ ====================================================*/
+.privacy {
+
+	&List__item {
+		margin-top: 50px;
+	}
+
+	&List__count {
+		font-size: 1.8rem;
+		color: #373582;
+	}
+
+	&List__txt {
+		margin: 10px 0 0;
+	}
+
+	&__date, &__dateBlock {
+		text-align: right;
+		margin: 30px 0 0;
+	}
+
+	&__contact {
+		border-top: 1px solid #E8EDF2;
+		margin: 27px 0 0;
+		padding: 34px 0 0;
+	}
+
+	&__contactInfoItem:first-child {
+		margin: 0 20px 0 0;
+	}
+
+	&__email {
+		text-decoration: underline;
+		color: #373582;
+	}
+
+	.ttl2 {
+		margin-bottom: 1rem;
+		font-size: 1.8rem;
+	}
+}

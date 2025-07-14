@@ -1,0 +1,116 @@
+/*=====================================================
+ Contact
+ ====================================================*/
+.mw_wp_form {
+	max-width: 840px;
+	margin: 0 auto;
+	textarea,
+	select,
+	input[type="email"],
+	input[type="text"] {
+		width: 100%;
+		padding: 1.5rem;
+		background-color: #F2F2F2;
+		border: 0;
+	}
+
+	&-wrap {
+		margin-top: 2.5rem;
+
+		.label {
+			position: relative;
+			display: inline-block;
+    		padding-right: 1rem;
+		}
+
+		.label:before {
+			content: "*";
+			position: absolute;
+			top: 0;
+			right: 0;
+			color: red;
+		}
+	}
+
+	&-name &-wrap:last-child,
+	&-name &-wrap:nth-child(2){
+		width: 100%;
+		@include breakpoint(sp) {
+			flex: 1;
+		}
+		
+	}
+
+	&-name &-wrap:first-child {
+		width: 100%;
+		@include breakpoint(sp) {
+			width: percentVal(200, 840);
+		}
+	}
+
+	&-name &-wrap:not(:last-child) {
+		@include breakpoint(sp) {
+			margin-right: percentVal(20, 840);
+		}
+	}
+
+	&-personal {
+		margin-top: 4rem;
+		.fillin {
+			text-align: center;
+			margin-top: 2rem;
+		}
+	}
+	&-content {
+		padding: 0.5rem;
+		border: 1px solid #E0E0E0;
+		.wrap {
+			max-height: 165px;
+		    overflow-y: scroll;
+		    padding: 1rem;
+		    &::-webkit-scrollbar {
+			  width: 8px;
+			}
+			 
+			/* Handle */
+			&::-webkit-scrollbar-thumb {
+			  background: #D8D8D8; 
+			}
+		}
+	}
+
+	&-name {
+		select {
+			appearance: none;
+	    	-moz-appearance: none;
+			-webkit-appearance: none;
+			background: url(assets/images/common/arrow.png) no-repeat 95% 20px;
+			background-color: #F2F2F2;
+			@include hack-ie(ie11) {
+				background: #F2F2F2;
+			}
+		}
+	}
+
+	.form-btn {
+		max-width: 350px;
+		margin: 5rem auto 0;
+		.btn--submit {
+			background: #000;
+			color: $color-white;
+			font-size:16px;
+			letter-spacing: 0.045em;
+			width: 100%;
+			border: 0;
+			padding: 2rem;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&:focus {
+				outline: unset;
+			}
+		}
+	}
+}

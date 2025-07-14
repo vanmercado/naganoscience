@@ -1,0 +1,750 @@
+/*=====================================================
+ Base
+ ====================================================*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    font-family: $font-primary;
+    color: #1D1D1D;
+    line-height: calculate_lh(16,30);
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+canvas {
+    width: 100%;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+}
+
+img, iframe {
+    max-width: 100%;
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+a, a:hover {
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    color: #373582;
+}
+
+a:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.hiddenPc {
+    display: block;
+    @include breakpoint(pc2) {
+        display: none;
+    }
+}
+
+
+.hiddenTablet {
+    display: block;
+    @include breakpoint(pc) {
+        display: none;
+    }
+}
+
+.hiddenSp {
+    display: none;
+     @include breakpoint(pc2) {
+        display: block;
+    }
+}
+
+.hiddenXs {
+    display: none;
+    @include breakpoint(sp) {
+        display: block;
+    }
+}
+
+.main-wrapper {
+    @include hack-ie(ie11) {
+        overflow: hidden;
+    }
+}
+
+/*---------------------------
+ Wordpress default style
+---------------------------*/
+.post {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .faux-heading {
+        font-feature-settings: "lnum";
+        font-variant-numeric: lining-nums;
+        font-weight: 700;
+        letter-spacing: -0.0415625em;
+        line-height: 1.25;
+        margin: 3.5rem 0 2rem;
+    }
+
+    h1,
+    .heading-size-1 {
+        font-size: 3.6rem;
+        font-weight: 800;
+        line-height: 1.138888889;
+    }
+
+    h2,
+    .heading-size-2 {
+        font-size: 3.2rem;
+    }
+
+    h3,
+    .heading-size-3 {
+        font-size: 2.8rem;
+    }
+
+    h4,
+    .heading-size-4 {
+        font-size: 2.4rem;
+    }
+
+    h5,
+    .heading-size-5 {
+        font-size: 2.1rem;
+    }
+
+    h6,
+    .heading-size-6 {
+        font-size: 1.6rem;
+        letter-spacing: 0.03125em;
+        text-transform: uppercase;
+    }
+    .aligncenter {
+        display: block;
+        margin: 0 auto;
+    }
+    .alignright {
+        float: right;
+    }
+    .alignleft {
+        float: left;
+    }
+    table {
+        border: 0.1rem solid #dcd7ca;
+        border-collapse: collapse;
+        border-spacing: 0;
+        empty-cells: show;
+        font-size: 1.6rem;
+        margin: 4rem 0;
+        max-width: 100%;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .alignleft > table {
+        margin: 0;
+    }
+    
+    .alignright > table {
+        margin: 0;
+    }
+    
+    th,
+    td {
+        border: 0.1rem solid #dcd7ca;
+        line-height: 1.4;
+        margin: 0;
+        overflow: visible;
+        padding: 0.5em;
+    }
+    
+    caption {
+        background: #dcd7ca;
+        font-weight: 600;
+        padding: 0.5em;
+        text-align: center;
+    }
+    
+    thead {
+        vertical-align: bottom;
+        white-space: nowrap;
+    }
+    
+    th {
+        font-weight: 700;
+    }
+}
+/*---------------------------
+ Section
+---------------------------*/
+section[class*="IpSec"] {
+    margin: 4rem 0 0;
+}
+
+.page-template-page-tmp-page02 section[class*="IpSec"]{
+    padding: 6rem 0;
+    margin: 0;
+    @include breakpoint(pc) {
+        padding: 7rem 0;
+    }
+}
+
+.sec__contentBox p:not(:first-of-type) {
+    margin: 30px 0 0;
+}
+
+.has-pattern section[class*="IpSec"]:nth-child(odd) {
+    background-color: #EEEEF5;
+}
+
+
+/*---------------------------
+ Containers
+---------------------------*/
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    @include breakpoint(pc4){
+        padding: 0;
+    }
+}
+
+.containerSm{
+    max-width: 990px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    @include breakpoint(pc3){
+        padding: 0;
+    }
+}
+
+/*---------------------------
+ Button
+---------------------------*/
+.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    color: $color-white;
+    letter-spacing: calculate_ls(20);
+    line-height: calculate_lh(16,24);
+    background: #0C074C;
+    padding: 24px 50px 24px 35px;
+    position: relative;
+    font-weight: 300;
+    @include breakpoint(pc) {
+        max-width: 350px;
+        margin: 20px auto 0;
+    }
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        right: 33px;
+        content: '';
+        width: 6px;
+        height: 6px;
+        border: 0px;
+        border-top: solid 2px #fff;
+        border-right: solid 2px #fff;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-top: -4px;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 30px;
+        border: 1px solid $color-white;
+        line-height: 30px;
+        border-radius: 50%;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        margin: auto;
+    }
+
+    &--white {
+        color: $color-blue02;
+        background: $color-white;
+        border: 1px solid #0C074C;
+        &:before, &:after {
+            border-color: #0C074C;
+        }
+    }
+
+    &--long {
+        max-width: 700px;
+    }
+
+    &--left {
+        margin: 20px 0 0;
+    }
+
+    &--right {
+        margin: 20px 0 0 auto;
+    }
+
+    &--borderWhite {
+        color: $color-white;
+        border: 1px solid $color-white;
+        background: transparent;
+    }
+}
+
+/*---------------------------
+ Title
+---------------------------*/
+.ttl {
+    color: $color-blue;
+    font-size: 6.250vw;
+    font-weight: 500;
+    line-height: calculate_lh(36,54);
+    letter-spacing: calculate_ls(50);
+    position: relative;
+    padding: 8% 0;
+    margin: 0;
+    text-align: center;
+    @include breakpoint(sp) {
+        font-weight: 300;
+        font-size: 3.6rem;
+        padding: 46px 0;
+    }
+
+    &__en {
+        color: #FFA993;
+        font-size: 19.097vw;
+        line-height: calculate_lh(110,145);
+        letter-spacing: 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        opacity: .15;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        text-transform: uppercase;
+        font-weight: 300;
+        @include breakpoint(sp) {
+            font-size: 11rem;
+        } 
+    }
+}
+
+.ttl2 {
+    font-size: 2.4rem;
+    color: $color-blue02;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    @include breakpoint(pc) {
+        font-size: 3rem;
+        text-align: left;
+        line-height: 1.875;
+        margin-bottom: 3rem;
+    }
+
+    small {
+        display: block;
+        font-size: 1.4rem;
+        @include breakpoint(pc) {
+            display: inline-block;
+            font-size: 1.6rem;
+        }
+    }
+
+    &--white {
+        color: $color-white;
+    }
+}
+
+/*---------------------------
+ Tab
+---------------------------*/
+.tab {
+    background: $color-white;
+    padding: 0 0 60px;
+
+    &--gray .is-active {
+        color: $color-blue02 !important;
+        border-color: #E8EDF2 !important;
+        background: #E8EDF2 !important;
+    }
+
+    &__link {
+        width: 50%;
+        color: $color-blue02;
+        font-size: 1.4rem;
+        line-height: calculate_lh(14,20);
+        letter-spacing: 0;
+        border: 1px solid #cbccce;
+        padding: 22px;
+        background-color: #fff;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        @include breakpoint(sp) {
+            text-align: center;
+        }
+
+        @include breakpoint(pc2) {
+            font-size: 1.6rem;
+            line-height: calculate_lh(16,24);
+            letter-spacing: calculate_ls(20);
+            border: 1px solid #BEC5E3;
+        }
+
+
+        &.is-active {
+            color: $color-white;
+            border-color: #373582;
+            background: #373582;
+        }
+    }
+
+    &__ttl {
+        display: block;
+    }
+
+    &__link:first-child &__ttl {
+        max-width: 120px;
+        @include breakpoint(sp) {
+            max-width: none;
+        }
+    }
+
+    &__link:last-child &__ttl {
+        max-width: 94px;
+        @include breakpoint(sp) {
+            max-width: none;
+        }
+    }
+
+    &__content {
+        display: none;
+        animation: fadeEffect 1s;
+
+        &.is-open {
+            display: block;
+        }
+    }
+
+    .btn {
+        margin: 35px auto 0;
+    }
+}
+
+/*---------------------------
+ Text Accent
+---------------------------*/
+.has-accent {
+    position: relative;
+    padding: 0 0 22px;
+    &:before {
+        position: absolute;
+        content: '';
+        width: 220px;
+        height: 1px;
+        background: #373582;
+        bottom: 0;
+        left: percentVal(243,990);
+    }
+}
+
+/*---------------------------
+ Global News List
+---------------------------*/
+.news {
+    width: 100%;
+    margin: auto; 
+
+    &__link {
+        color: $color-blue02;
+        line-height: calculate_lh(16,24);
+        letter-spacing: calculate_ls(20);
+        padding: 20px 0;
+        
+        border-bottom: 1px solid #BEC5E3;
+        flex-direction: column;
+        @include breakpoint(pc) {
+			padding: 30px 0;
+		}
+        @include breakpoint(pc2) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__tag, &__date {
+        width: 150px;
+        margin: 0 0 10px 0;
+        @include breakpoint(pc2){
+            text-align: center;
+            margin: 0 percentVal(45,1040) 0 0;
+        }
+    }
+
+    &__tag {
+        color: $color-white;
+        width: 107px;
+        background: #FF8B6E;
+        padding: 5px;
+        font-size: 1.2rem;
+        text-align: center;
+        @include breakpoint(pc){
+            width: 150px;
+            padding: 13px;
+            font-size: 1.6rem;
+        }
+    }
+
+    &__date {
+        color: #AF8F1A;
+        text-align: left;
+    }
+
+    &__important {
+        padding: 15px;
+    }
+}
+
+/*---------------------------
+ List01
+---------------------------*/
+.list01 {
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        &:not(:last-child) {
+            margin: 10px 0 0;
+            border-bottom: 1px solid #E8EDF2;
+        }
+        @include breakpoint(pc) {
+            flex-direction: row;
+            justify-content: space-between;
+            &:not(:last-child) {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &__item:last-child &__label, &__item:last-child &__contentBox {
+        border-bottom: 0;
+    }
+
+    &__label, &__contentBox {
+        padding: 15px 0;
+        @include breakpoint(pc) {
+            border-bottom: 1px solid #E8EDF2;
+        }
+    }
+
+    &__label {
+        width: 100%;
+        @include breakpoint(pc) {
+            width: percentVal(270,990);
+        }
+    }
+
+    &__contentBox {
+        width: 100%;
+        padding: 0 0 0 20px;
+        @include breakpoint(pc) {
+            width: percentVal(680,990);
+            padding: 15px 0;
+        }
+    }
+
+    &__txt:not(:first-of-type) {
+        margin-top: 40px;
+    }
+
+    &__txt.has-accent:before {
+        width: 45px;
+        left: percentVal(95,680);
+    }
+
+    &__img {
+        flex: 1;
+        
+        img {
+            object-fit: contain;
+            height: 210px;
+        }
+    }
+}
+
+/*---------------------------
+ List02
+---------------------------*/
+.list02 {
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 15px;
+        &:nth-child(even) {
+            background: #E8EDF2;
+        }
+        @include breakpoint(pc) {
+            flex-direction: row;
+        }
+    }
+
+    &__label {
+        width: 76px;
+    }
+
+    &__contentBox {
+        flex: 1;
+        padding: 20px 0 0 percentVal(50,990);
+        @include breakpoint(pc) {
+            padding: 0 0 0 percentVal(50,990);
+        }
+    }
+
+   .has-accent {
+        display: inline-block;
+        &:before {
+            left: 0;
+        }
+
+        &--long:before {
+            width: 100%;
+        }
+    }
+}
+
+/*---------------------------
+ List03
+---------------------------*/
+.list03 {
+
+
+    &__item {
+        display: flex;
+        border-top: 1px solid #E8EDF2;
+        padding: 30px 10px 20px;
+        flex-direction: column;
+        @include breakpoint(pc) {
+            flex-direction: row;
+        }
+    }
+
+    &__label {
+        width: 100%;
+        @include breakpoint(pc) {
+            width: 140px;
+        }
+    }
+
+    &__contentBox {
+        flex: 1;
+        padding: 20px 0 0 30px;
+        @include breakpoint(pc) {
+            padding: 0 0 0 10px;
+        }
+    }
+}
+
+/*---------------------------
+ Global Image List
+---------------------------*/
+.image {
+    &__list {
+        margin: 2rem auto 3rem;
+    }
+
+    &__ttl {
+        color: $color-blue02;
+    }
+    
+    &__item {
+        margin-top: 2rem;
+        @include breakpoint(sp) {
+            width: percentVal(485, 990);
+        }
+    }
+
+    &__item:first-child {
+        @include breakpoint(sp) {
+            margin-right: percentVal(10, 990);
+        }
+    }
+}
+
+/*---------------------------
+ Fade effect
+---------------------------*/
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+

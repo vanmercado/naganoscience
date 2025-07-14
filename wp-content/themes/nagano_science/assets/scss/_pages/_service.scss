@@ -1,0 +1,164 @@
+/*====================================================================
+
+ Solution
+
+====================================================================*/
+.ipBannerService__text {
+    display: inline-block;
+    width: auto;
+    top: 12rem;
+    transform: translateY(0);
+    padding: 2rem 4rem;
+    background: $color-blue02;
+    color: $color-white;
+	@include breakpoint(pc) {
+		top: 35%;
+		transform: translateY(-35%);
+	}
+}
+.service {
+
+    .col2 {
+    	& > .containerSm {
+    		flex-direction: row-reverse;
+    		align-items: flex-end;
+    	}
+    	&__left {
+    		@include breakpoint(pc) {
+    			width: percentVal(479, 990);
+    		}
+    	}
+    	&__right {
+    		flex: 1;
+    		@include breakpoint(pc) {
+    			margin-right: percentVal(15, 990);
+    		}
+    	}
+    }
+
+    &IpSec01 {
+        &__img {
+			margin-top: 3rem;
+			.hiddenPc {
+				display: block;
+				@include breakpoint(sp) {
+					display: none;
+				}
+			}
+			
+			.hiddenSp {
+				display: none;
+				 @include breakpoint(sp) {
+					display: block;
+				}
+			}
+		}
+		.btn {
+			margin-top: 3rem;
+		}
+    }
+
+    &IpSec02 {
+    	&__item {
+    		margin-top: 2rem;
+    		@include breakpoint(sp) {
+    			width: percentVal(485, 990);
+    		}
+    	}
+
+    	&__item:first-child {
+    		@include breakpoint(sp) {
+    			margin-right: percentVal(10, 990);
+    		}
+    	}
+
+    	&__info{
+    		margin: 2rem 0;
+    	}
+
+    	&__infoItem {
+    		color: #071737;
+    		margin-top: 1rem;
+    		flex-direction: column;
+    		@include breakpoint(sp) {
+				flex-direction: row;
+				align-items: center;
+			}
+    		.label {
+    			width: 195px;
+    			padding-right: 1.6rem;
+    			margin-right: percentVal(20, 990);
+    			&:before {
+					@include breakpoint(pc) {
+						content: ":";
+						position: absolute;
+						top: 50%;
+						right: 0;
+						@include browsers(transform, translateY(-50%), moz webkit o ms);
+					}
+				}
+				.block {
+					display: block;
+				}
+    		}
+    		.desc {
+				position: relative;
+				padding-left: 2rem;
+				flex: 1;
+				@include breakpoint(pc) {
+					padding-left: 0;
+				}
+				&:before {
+					display: block;
+					content: ":";
+    				position: absolute;
+    				top: 50%;
+    				left: 0;
+					@include browsers(transform, translateY(-50%), moz webkit o ms);
+					font-size: 16px;
+					@include breakpoint(pc) {
+						display: none;
+					}
+				}
+    		}
+    	}
+
+    	&__infoItem:first-child {
+    		.desc {
+    			font-size: 3.6rem;
+				font-weight: 200;
+				&:before {
+					font-size: 24px;
+				}
+    		}
+		}
+		
+		.sec__contentBox:nth-of-type(2) {
+			font-size: 1.2rem;
+			color: #071737;
+			.text-indent {
+				margin-left: 0;
+				text-indent: 0;
+				@include breakpoint(pc) {
+					margin-left: 1.4rem;
+					text-indent: -1.4rem;
+				}
+			}
+		}
+    }
+
+    &IpSec06 {
+    	&__item {
+    		margin-top: 2rem;
+    		@include breakpoint(sp) {
+    			width: percentVal(485, 990);
+    		}
+    	}
+
+    	&__item:first-child {
+    		@include breakpoint(sp) {
+    			margin-right: percentVal(10, 990);
+    		}
+    	}
+    }
+}

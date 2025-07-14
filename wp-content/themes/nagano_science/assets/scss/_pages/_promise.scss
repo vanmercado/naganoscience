@@ -1,0 +1,183 @@
+/*====================================================================
+
+ Promise
+
+====================================================================*/
+.page-id-59 {
+    .content-full {
+        padding: 0;
+        @include breakpoint(pc2) {
+            padding: 0 0 50px;
+        }
+    }
+    .ipBanner {
+        &__ttl {
+            font-size: 8rem;
+            opacity: .15;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+            text-align: center;
+            line-height: 0.6;
+            color: #0C074C;
+            font-family: 'Roboto Condensed', sans-serif;
+            @include breakpoint(pc2) {
+                font-size: 11rem;
+            }
+        }
+        &__jap {
+            text-align: center;
+            font-size: 2.6rem;
+            color: $color-white;
+            @include breakpoint(pc2) {
+                font-size: 3.6rem;
+            }
+        }
+        &::before {
+            display: none;
+        }
+    }
+    .spPromise {
+        padding: 85px 0 60px;
+    }
+}
+.promise {
+
+    &__content {
+        width: 100%;
+        padding: 2rem 1.5rem;
+        @include breakpoint(pc2){
+            width: percentVal(480, 990);
+            padding: 0;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        @include breakpoint(pc2){
+            width: percentVal(680, 1440);
+        }
+        img {
+            display: block;
+        }
+    }
+
+    &__item {
+        position: relative;
+        margin-top: 0;
+        @include breakpoint(pc){
+            margin-top: 7rem;
+        }
+        .containerSm {
+            margin-top: 4rem;
+            padding: 0 0;
+            flex-direction: column-reverse;
+            @include breakpoint(pc){
+                margin-top: 0;
+            }
+        }
+        &:nth-child(3) {
+            .containerSm {
+                margin-top: 0;
+            }
+        }
+        .ttl2 {
+            margin-top: 2rem;
+            @include breakpoint(pc){
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__item:not(:first-child) {
+        @include breakpoint(pc2){
+            margin-top: 12%;
+        }
+    }
+
+    /*-----------------------------------------------
+        Odd
+    ------------------------------------------------*/
+    &__item:nth-child(odd) {
+        @include breakpoint(pc2){
+            padding: 10% 0 0;
+            margin-top: 7rem;
+        }
+
+        @include breakpoint(pc5){
+            padding: 16% 0 0;
+        }
+    }
+
+    .promise__item:nth-child(odd):first-child {
+        @include breakpoint(pc2){
+            margin-top: 0;
+        }
+    }
+
+    &__item:nth-child(odd) .containerSm {
+        @include breakpoint(pc2){
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+    }
+
+    &__item:nth-child(odd) &__img {
+        @include breakpoint(pc2){
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__item:nth-child(odd) &__content {
+        @include breakpoint(pc2){
+            margin: 0 0 0 percentVal(80, 1440);
+        }
+    }
+
+    /*-----------------------------------------------
+        Even
+    ------------------------------------------------*/
+    &__item:nth-child(even) {
+        @include breakpoint(pc2){
+            padding: 3% 0 5%;
+        }
+
+        @include breakpoint(pc5){
+            padding: 10% 0 5%;
+        }
+    }
+
+    &__item:nth-child(even) &__content{
+        background-color: #EEEEF5;
+        padding: 1.5rem 1.5rem 4rem;
+        @include breakpoint(pc2){
+            margin: 0 percentVal(80, 1440) 0 0;
+            background-color: transparent;
+            padding: 0;
+            &:before {
+                content: "";
+                background-color: #EEEEF5;
+                width: 85%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+       
+    }
+
+    &__item:nth-child(even) &__img {
+        @include breakpoint(pc2){
+            margin-top: -5.5%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}

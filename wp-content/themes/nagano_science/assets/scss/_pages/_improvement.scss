@@ -1,0 +1,60 @@
+/*====================================================================
+
+ Improvement
+
+====================================================================*/
+.improvement {
+    section[class^="ipSec"]:nth-child(odd) {
+        background-color: #EEEEF5;
+    }
+    .secTitle {
+        font-size: 5.208vw;
+        color: $color-blue02;
+        margin-bottom: 2rem;
+        @include breakpoint(pc) {
+            font-size: 3rem;
+        }
+
+        small {
+            font-size: 1.6rem;
+        }
+    }
+
+    .text-indent {
+        margin-left: 1.4rem;
+        text-indent: -1.4rem;
+    }
+    
+    .secContent {
+        margin-bottom: 2rem;
+    }
+
+    .ipSec01 {
+        &__list {
+            margin: 2rem 0;
+        }
+        &__ttl {
+            color: $color-blue02;
+        }
+        &__item {
+            margin-top: 2rem;
+            @include breakpoint(pc) {
+                margin-top: 0;
+            }
+        }
+        &__item:first-child {
+            width: 100%;
+            @include breakpoint(pc) {
+                width: percentVal(439, 990);
+                margin-right: percentVal(20, 990);
+            }
+        }
+
+        &__item:last-child {
+            width: 100%;
+            @include breakpoint(pc) {
+                flex: 1;
+            }
+        }
+    }
+}

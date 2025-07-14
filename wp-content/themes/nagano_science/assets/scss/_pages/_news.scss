@@ -1,0 +1,67 @@
+/*=====================================================
+ News
+ ====================================================*/
+ .ipBannerNews__text {
+    color: $color-white;
+}
+.page-template-page-tmp-news {
+
+	.pageNews {
+		.ttl2 {
+			margin-bottom: 0;
+		}
+		&-text {
+			margin-bottom: 4rem;
+			.btn {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.tab {
+
+		&__link {
+			padding: 0;
+			border-color: #E8EDF2;
+		}
+
+		&__link a {
+			padding: 22px 10px;
+			color: $color-blue02;
+			display: block;
+		}
+
+		&__link.is-active {
+			background: #E8EDF2;
+			border-color: #E8EDF2;
+		}
+	}
+
+	.pagination {
+		justify-content: center;
+		margin: 2rem auto 0;
+		.page-numbers {
+			display: block;
+			margin: 0.2rem;
+			padding: 1.0rem;
+			border-radius: 10px;
+			color: $color-blue02;
+			@include breakpoint(pc) {
+				margin: 0.4rem;
+				padding: 1rem 1.6rem;
+			}
+			&:not(.dots) {
+				border: 1px solid $color-blue02;
+				&:hover {
+					background: $color-blue02;
+					color: $color-white;
+				}
+			}
+			&.current {
+				background: #AF8F1A;
+				color: $color-white;
+				border: 1px solid #AF8F1A;
+			}
+		}
+	}
+}

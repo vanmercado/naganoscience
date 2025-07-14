@@ -1,0 +1,34 @@
+/*
+ Theme Name: WD
+ Description: This is the base theme for all the Wordpress projects.
+ Version: 1.0
+ */
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+@import "_partials/functions";
+@import "_partials/mixins";
+@import "_partials/variables";
+
+@import "base";
+@import "_modules/header";
+@import "_modules/footer";
+@import "_modules/page";
+
+@import "_pages/home-page";
+@import "_pages/page404";
+@import "_pages/promise";
+@import "_pages/solution";
+@import "_pages/improvement";
+@import "_pages/product";
+@import "_pages/message";
+@import "_pages/service";
+@import "_pages/contact";
+@import "_pages/emergency";
+@import "_pages/privacy";
+@import "_pages/recruit";
+@import "_pages/news";
+@import "_pages/stabilitytest";
+@import "_pages/company";
+@import "_pages/vision";
+@import "_pages/challenge";
+@import "_pages/sustainabilty";

@@ -1,0 +1,152 @@
+/*====================================================================
+
+ Product
+
+====================================================================*/
+.ipBannerProduct__text {
+    display: inline-block;
+    width: auto;
+    top: 12rem;
+    transform: translateY(0);
+    padding: 2rem 4rem;
+    background: $color-blue02;
+    color: $color-white;
+    @include breakpoint(pc) {
+        top: 35%;
+        transform: translateY(-35%);
+    }
+}
+.product {
+    &__wrap:nth-child(odd) {
+        background-color: #EEEEF5;
+    }
+
+    &__wrap:nth-child(odd) &__category{
+        .category__ttl {
+            background-color: #EEEEF5;
+        }
+        &:before {
+            background-color: #fff;
+        }
+    }
+
+    &__wrap:nth-child(even) &__category{
+        .category__ttl {
+            background-color: #fff;
+        }
+        &:before {
+            background-color: #E8EDF2;
+        }
+    }
+    &__wrap {
+        padding: 4rem 0;
+        @include breakpoint(pc){
+            padding: 7rem 0;
+        }
+    }
+
+    &__item {
+        align-items: flex-end;
+        margin-top: 4rem;
+
+        .tag {
+            background-color: #AF8F1A;
+            padding: 0 0.9rem;
+            font-size: 1.4rem;
+            color: $color-white;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .img {
+            width: 100%;
+            margin: 0 0 3rem 0;
+            background-color: #E5E6E6;
+            @include breakpoint(pc){
+                width: percentVal(400, 990);
+                margin: 0 percentVal(95, 990) 0 0;
+            }
+        }
+
+        .ttl2 {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+    }
+
+    &__info {
+        @include breakpoint(pc){
+            flex: 1;
+        }
+        
+    }
+
+    &__category {
+        font-size: 2.8rem;
+        z-index: 1;
+        position: relative;
+        color: $color-blue02;
+        font-weight: 400;
+        .category__ttl {
+            padding-right: 3rem;
+        }
+
+        &:before {
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: 0;
+            margin: auto 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    &__test {
+        padding: 2rem 0 6rem;
+        background-color: #EEEEF5;
+        @include breakpoint(pc2) {
+            padding: 2rem 0 8rem;
+        }
+        &-wrap {
+            background: url(assets/images/product/product_test@2x.jpg) center/100% 100% no-repeat;
+            display: block;
+            padding: 4.040vw;
+        }
+
+        &-bnr * {
+            -webkit-transition: 0.3s ease-in-out;
+            -moz-transition: 0.3s ease-in-out;
+            -o-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                opacity: 0.8;
+                filter: alpha(opacity=80);
+                -moz-opacity: 0.8;
+            }
+        }
+
+        .ttl2 {
+            font-weight: 100;
+            text-align: center;
+            @include breakpoint(sp) {
+                max-width: 503px;
+                margin: 0 auto;
+                line-height: 1.4;
+            }
+            @include breakpoint(pc2) {
+                line-height: 1.875;
+            }
+        }
+
+        .txt {
+            display: block;
+            font-size: 16px;
+            color: $color-blue02;
+            background-color: #fff;
+            padding: 0.5rem;
+            font-weight: 400;
+        }
+    }
+}

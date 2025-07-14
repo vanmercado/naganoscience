@@ -1,0 +1,64 @@
+/*=====================================================
+ Footer
+ ====================================================*/
+.footer {
+	color: #373582;
+	background: $color-white;
+	padding: 18px percentVal(30,1440);
+	justify-content: space-between;
+	align-items: center;
+	font-family: din-2014, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.4rem;
+	letter-spacing: calculate_ls(50);
+	border: 1px solid #E0E0E0;
+	flex-direction: column-reverse;
+	@include breakpoint(pc) {
+		flex-direction: row;
+	}
+
+	&__copyright {
+		margin-top: -8px;
+	}
+
+	&__right {
+		align-items: center;
+		margin: 18px 0;
+		@include breakpoint(pc){
+			margin-bottom: 0;
+		}
+	}
+
+	&__link {
+		color: #0C074C;
+		margin-right: 25px;
+	}
+
+	&__scroll {
+		color: #0C074C;
+		width: 48px;
+		height: 48px;
+		border: 1px solid #0C074C;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 48px;
+		font-size: 2rem;
+		position: absolute;
+		right: 15px;
+		top: 20px;
+		@include breakpoint(pc) {
+			position: relative;
+			right: auto;
+			top: auto;
+		}
+		@include hack-ie(ie11) {
+			&:before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}

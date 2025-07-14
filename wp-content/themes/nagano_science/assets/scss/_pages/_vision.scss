@@ -1,0 +1,295 @@
+/*====================================================================
+
+ Vision
+
+====================================================================*/
+.ipBanner__img {
+    background-position: top left;
+    @include breakpoint(pc2) {
+        background-position: center center;
+    }
+}
+.ipBanner__ttl {
+    font-size: 3.8rem;
+    @include breakpoint(pc2) {
+        font-size: 5rem;
+    }
+}
+.vision {
+    &List {
+        @include breakpoint(pc2) {
+            margin: 4rem 0 0;
+        }
+    }
+    &Ttl {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $color-blue02;
+        text-align: center;
+        align-items: center;
+        width: 260px;
+        justify-content: center;
+        margin-right: percentVal(30, 990);
+        position: relative;
+        display: none;
+        @include breakpoint(pc2) {
+            display: flex;
+            font-size: 2rem;
+        }
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+
+        }
+
+        &:before {
+            top: -40px;
+            left: 0;
+            border-top: 40px solid transparent;
+            border-left: 130px solid transparent;
+            border-bottom: 0 solid transparent;
+            border-right: 130px solid transparent;
+        }
+
+        &:after {
+            bottom: -40px;
+            left: 0;
+            border-top: 40px solid transparent;
+            border-left: 131px solid transparent;
+            border-bottom: 0 solid transparent;
+            border-right: 131px solid transparent;
+        }
+    }
+
+    &Content {
+        flex: 1;
+        .year {
+            font-size: 3rem;
+            font-style: italic;
+            color: $color-blue03;
+            line-height: 1;
+            margin: 0 0 2rem 0;
+            position: relative;
+            padding-left: 30px;
+            display: inline-block;
+            @include breakpoint(pc2) {
+                margin: 0 percentVal(90, 700) 0 0;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 8px;
+                left: 0;
+                background-color: $color-blue03;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+            }
+        }
+
+        .ttl {
+            display: inline-block;
+            padding: 0 0 0 30px;
+            line-height: 1;
+            flex: 1;
+            text-align: left;
+            font-size: 2.6rem;
+            color: $color-blue02;
+            @include breakpoint(pc2) {
+                display: block;
+                margin: 2rem 0 0;
+            }
+        }
+
+        &__list {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: 9px;
+                background-color: $color-blue03;
+                width: 1px;
+                height: calc(100% - -50px);
+            }
+        }
+
+        &__item {
+            position: relative;
+            padding: 1.5rem 0;
+            display: block;
+            @include breakpoint(pc2) {
+                display: flex;
+                padding: 2.5rem 0;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 96%;
+                    height: 2px;
+                    background-image: linear-gradient(to right, #7D8BC8 45%, rgba(255, 255, 255, 0) 0%);
+                    background-position: bottom;
+                    background-size: 6px 1px;
+                    background-repeat: repeat-x;
+                }
+            }
+            
+
+            ul {
+                padding-left: 30px;
+                flex: 1;
+            }
+
+            ul li {
+                position: relative;
+                color: $color-blue02;
+                padding: 0 0 1rem 1.5rem;
+                @include breakpoint(pc2) {
+                    font-size: 1.85rem;
+                }
+            }
+
+            ul li:before {
+                content: "";
+                position: absolute;
+                height: 5px;
+                width: 5px;
+                background-color: $color-blue02;
+                border-radius: 50%;
+                left: 0;
+                top: 14px;
+            }
+        }
+    }
+
+    &Item:first-child {
+        .visionContent__item:first-child{
+            padding-top: 1rem;
+        }
+        .visionContent__item:nth-child(2) {
+            align-items: center;
+        }
+        .bgColor01:before {
+            display: none;
+        }
+    }
+
+    &Item:not(:first-child) {
+        .visionContent {
+            margin-top: -2rem;
+            @include breakpoint(pc2) {
+                margin-top: -4rem;
+            }
+        }
+    }
+
+    &Item:last-child {
+        ul:before {
+            height: calc(100% - -20px);
+        }
+    }
+
+    &Item:not(:last-child) {
+        @include breakpoint(pc2) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &Tag {
+        position: relative;
+        margin-top: 0;
+        background-color: $color-blue;
+        color: $color-white;
+        padding: 1.5rem 0.5rem;
+        z-index: 1;
+        @include breakpoint(pc2) {
+            margin-top: 4rem;
+        }
+        h3 {
+            font-size: 2.4rem;
+            font-weight: 300;
+            font-style: italic;
+            @include breakpoint(pc2) {
+                font-size: 3rem;
+            }
+            span {
+                font-style: normal;
+            }
+        }
+        p {
+            font-size: 1.45rem;
+            @include breakpoint(pc2) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .spBlock {
+        display: block;
+        padding-left: 30px;
+        margin-top: 2rem;
+        @include breakpoint(pc2) {
+            display: none;
+        }
+
+        .visionTtl {
+            display: block;
+            clip-path: polygon(100% 0, 100% 60%, 50% 100%, 0 60%, 0 0);
+            width: 100%;
+            padding: 2rem 0 5rem;
+        }
+    }
+
+    .bg {
+        &Color01 {
+            background-color: #D4D8E7;
+            &:before {
+                border-left-color:#D4D8E7;
+                border-right-color: #D4D8E7;
+
+            }
+            &:after {
+                border-top-color: #D4D8E7;
+            }
+        }
+
+        &Color02 {
+            background-color: #BDD7EE;
+            &:before {
+                border-left-color:#BDD7EE;
+                border-right-color: #BDD7EE;
+
+            }
+            &:after {
+                border-top-color: #BDD7EE;
+            }
+        }
+
+        &Color03 {
+            background-color: #9EBFDD;
+            &:before {
+                border-left-color:#9EBFDD;
+                border-right-color: #9EBFDD;
+
+            }
+            &:after {
+                border-top-color: #9EBFDD;
+            }
+        }
+
+        &Color04 {
+            background-color: #9DA9D9;
+            &:before {
+                border-left-color:#9DA9D9;
+                border-right-color: #9DA9D9;
+
+            }
+            &:after {
+                border-top-color: #9DA9D9;
+            }
+        }
+    }
+}

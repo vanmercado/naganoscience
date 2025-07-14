@@ -1,0 +1,127 @@
+/*====================================================================
+
+ Sustainabilty
+
+====================================================================*/
+[data-page="sustainabiltyPage"] {
+    .ipBanner__text {
+        color: #fff;
+    }
+
+    .content-full {
+        padding-top: 20px;
+    }
+}
+
+.sustainabiltySec {
+
+    &__block {
+        padding: 30px 15px 50px;
+
+        &:nth-of-type(1) {
+            background-color: #f2faff;
+        }
+
+        &:nth-of-type(2) {
+            background-color: #f2feff;
+        }
+
+        &:nth-of-type(3) {
+            background-color: #d9e5f8;
+        }
+
+        &+& {
+            margin-top: 20px;
+        }
+
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+
+    &__blockInner {
+        max-width: 990px;
+        margin: 0 auto;
+    }
+
+    &__blockTitle {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #1d6183;
+        font-size: 25px;
+
+
+        &.color02 {
+            color: #002060
+        }
+    }
+
+    &__text {
+        &.mb-20 {
+            margin-bottom: 20px;
+        }
+
+
+        .bold {
+            font-weight: bold;
+        }
+    }
+
+    &__blockDesc{
+        max-width: 850px;
+        margin: 0 auto ;
+    }
+
+    &__list {
+        margin-top: 15px;
+    }
+
+    &__listItem {
+        padding-left: 15px;
+        position: relative;
+        line-height: 2;
+
+
+        &::before {
+            content: '-';
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &__olist {
+        margin: 20px 0;
+        counter-reset: list; // Resets the counter
+        padding-inline-start: 0;
+    }
+
+    &__olistItem {
+        padding-left: 20px;
+        position: relative;
+        line-height: 2;
+        list-style-type: none;
+
+        &::before {
+            content: counter(list, decimal) ". "; // Use decimal for numeric counter
+            counter-increment: list;
+            position: absolute;
+            left: 0;
+        }
+
+        &+& {
+            margin-top: 15px;
+        }
+
+        &::marker {
+            content: '';
+        }
+
+
+        &__text {
+
+            &.bold {
+                font-weight: bold;
+            }
+        }
+    }
+}
